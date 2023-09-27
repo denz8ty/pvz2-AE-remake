@@ -1,0 +1,634 @@
+{"#comment": "AE-4: Sandstorm | ELM: Ver-10 [VNL v10.3]",
+"#zombies": "mummy, mummy_armor1, mummy_armor2, pharaoh",
+"objects": [{
+    "objclass": "LevelDefinition",
+    "objdata": {
+    "StartingSun": 50,
+    "Description": "{PLAYER}'s Trip to Ancient Egypt!",
+    "FirstRewardParam": "moneybag",
+    "AddBonusStartingSun": false,
+    "NormalPresentTable": "egypt_normal_01",
+    "ShinyPresentTable": "egypt_shiny_01",
+    "Loot": "RTID(DefaultLoot@LevelModules)",
+    "ResourceGroupNames": [
+        "DelayLoad_Background_Beach",
+        "DelayLoad_Background_Beach_Compressed",
+        "Tombstone_Dark_Special",
+        "Tombstone_Dark_Effects"
+    ],
+    "Modules": [
+        "RTID(EgyptMowers@LevelModules)",
+        "RTID(StandardIntro@LevelModules)",
+        "RTID(Conveyor@CurrentLevel)",
+        "RTID(Escalation@CurrentLevel)",
+        "RTID(NewWaves@CurrentLevel)",
+        "RTID(ZombiesDeadWinCon@LevelModules)",
+        "RTID(DefaultZombieWinCondition@LevelModules)"
+    ],
+    "Name": "AE-4: Sandstorm",
+    "StageModule": "RTID(EgyptStage@LevelModules)"
+}},
+{"aliases": ["Conveyor"],
+"objclass": "ConveyorSeedBankProperties",
+"objdata": {
+    "ManualPacketSpawning": false,
+    "DropDelayConditions": [
+        { "Delay": 4, "MaxPackets": 0 }
+    ],
+    "SpeedConditions": [
+        { "Speed": 80, "MaxPackets": 0 }
+    ],
+    "InitialPlantList": [
+        { "PlantType": "peashooter", "Level": 2 },
+        { "PlantType": "wallnut" },
+        { "PlantType": "potatomine" },
+        { "PlantType": "cabbagepult" },
+        { "PlantType": "iceburg" },
+        { "PlantType": "snowpea" },
+        { "PlantType": "bonkchoy" }
+    ]
+}},
+{"aliases": ["Escalation"],
+"objclass": "LevelEscalationModuleProperties",
+"objdata": {
+    "FlagCount": 2,
+    "WavesPerFlag": 8,
+    "PlantfoodToSpawnCount": 0,
+    "StartingPoints": 0,
+    "PointIncrementPerWave": 0,
+    "WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+    "ZombiePool": [
+
+    ]
+}},
+{"aliases": ["NewWaves"],
+"objclass": "WaveManagerModuleProperties",
+"objdata": {}
+},
+{"aliases": ["WaveManager"],
+"objclass": "WaveManagerProperties",
+"objdata": {
+    "FlagWaveInterval": 8,
+    "WaveCount": 16,
+    "SuppressFlagZombie": false,
+    "MinNextWaveHealthPercentage": 0.2,
+    "MaxNextWaveHealthPercentage": 0.2,
+    "Waves": [
+        ["RTID(Sandstorm1_C7@.)"],
+        ["RTID(Sandstorm2_C6@.)", "RTID(Sandstorm2_C7@.)"],
+        ["RTID(Sandstorm3_C7@.)", "RTID(Sandstorm3_C8@.)"],
+        ["RTID(Sandstorm4_C6@.)", "RTID(Sandstorm4_C7@.)"],
+        ["RTID(Sandstorm5_C6@.)", "RTID(Sandstorm5_C7@.)", "RTID(Sandstorm5_C8@.)"],
+        ["RTID(Sandstorm6_C5@.)"],
+        ["RTID(Sandstorm7_C6@.)", "RTID(Sandstorm7_C7@.)"],
+        ["RTID(Sandstorm8_C5@.)", "RTID(Sandstorm8_C7@.)", "RTID(Sandstorm8_C8@.)"],
+        ["RTID(Sandstorm9_C6@.)", "RTID(Sandstorm9_C7@.)", "RTID(Sandstorm9_C8@.)"],
+        ["RTID(Sandstorm10_C6@.)", "RTID(Sandstorm10_C7@.)", "RTID(Sandstorm10_C8@.)"],
+        ["RTID(Sandstorm11_C4@.)", "RTID(Sandstorm11_C5@.)", "RTID(Sandstorm11_C6@.)"],
+        ["RTID(Sandstorm12_C4@.)", "RTID(Sandstorm12_C6@.)", "RTID(Sandstorm12_C7@.)"],
+        ["RTID(Sandstorm13_C7@.)", "RTID(Sandstorm13_C8@.)"],
+        ["RTID(Sandstorm14_C6@.)"],
+        ["RTID(Sandstorm15_C3@.)", "RTID(Sandstorm15_C6@.)", "RTID(Sandstorm15_C7@.)"],
+        ["RTID(Sandstorm16_C6@.)", "RTID(Sandstorm16_C7@.)", "RTID(Sandstorm16_C8@.)"]
+    ]
+}},
+{"aliases":["Sandstorm1_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm2_C6"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 6,
+    "ColumnEnd": 6,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm2_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm3_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm3_C8"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 8,
+    "ColumnEnd": 8,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm4_C6"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 6,
+    "ColumnEnd": 6,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm4_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm5_C6"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 6,
+    "ColumnEnd": 6,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm5_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm5_C8"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 8,
+    "ColumnEnd": 8,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm6_C5"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 5,
+    "ColumnEnd": 5,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm7_C6"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 6,
+    "ColumnEnd": 6,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm7_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm8_C5"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 5,
+    "ColumnEnd": 5,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(pharaoh@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm8_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm8_C8"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 8,
+    "ColumnEnd": 8,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm9_C6"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 6,
+    "ColumnEnd": 6,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm9_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm9_C8"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 8,
+    "ColumnEnd": 8,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm10_C6"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 6,
+    "ColumnEnd": 6,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm10_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm10_C8"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 8,
+    "ColumnEnd": 8,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm11_C4"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 4,
+    "ColumnEnd": 4,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm11_C5"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 5,
+    "ColumnEnd": 5,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm11_C6"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 6,
+    "ColumnEnd": 6,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm12_C4"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 4,
+    "ColumnEnd": 4,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm12_C6"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 6,
+    "ColumnEnd": 6,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(pharaoh@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm12_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm13_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm13_C8"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 8,
+    "ColumnEnd": 8,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm14_C6"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 6,
+    "ColumnEnd": 6,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"},
+        {"Type": "RTID(pharaoh@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm15_C3"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 3,
+    "ColumnEnd": 3,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm15_C6"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 6,
+    "ColumnEnd": 6,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(pharaoh@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm15_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm16_C6"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 6,
+    "ColumnEnd": 6,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"},
+        {"Type": "RTID(pharaoh@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm16_C7"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 7,
+    "ColumnEnd": 7,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor1@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(pharaoh@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+{"aliases":["Sandstorm16_C8"],
+"objclass": "StormZombieSpawnerProps",
+"objdata": {
+    "AdditionalPlantfood": "0",
+    "Type": "sandstorm",
+    "ColumnStart": 8,
+    "ColumnEnd": 8,
+    "TimeBetweenGroups": 0.5,
+    "GroupSize": 1,
+    "Zombies": [
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy_armor2@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"},
+        {"Type": "RTID(mummy@ZombieTypes)"}
+    ]
+}},
+        {}
+    ],
+    "version": 1
+}
